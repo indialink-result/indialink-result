@@ -48,3 +48,794 @@
       justify-content: space-between;
       box-shadow: 0 2px 8px rgba(0,0,0,0.12);
     }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-section img {
+      height: 80px;
+      width: auto;
+    }
+
+    .site-title {
+      line-height: 1.2;
+    }
+
+    .site-title h1 {
+      font-family: 'Baloo 2', cursive;
+      font-size: 32px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #FF6B00, #1A2D6E);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+
+    .site-title .subtitle {
+      font-size: 13px;
+      color: #555;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .site-title .hindi-sub {
+      font-size: 12px;
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .header-right {
+      text-align: right;
+    }
+
+    .header-right .founder {
+      font-size: 11px;
+      color: #777;
+    }
+    .header-right .founder strong {
+      color: var(--navy);
+      font-size: 13px;
+      display: block;
+    }
+
+    .date-box {
+      background: var(--navy);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      margin-top: 4px;
+      text-align: center;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      background: linear-gradient(90deg, #FF6B00, #e55a00);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1px;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 9px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    nav a:hover, nav a.active {
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* ===== SECOND NAV ===== */
+    .second-nav {
+      background: var(--navy);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1px;
+    }
+
+    .second-nav a {
+      color: #cdd4f7;
+      text-decoration: none;
+      padding: 7px 14px;
+      font-size: 12px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .second-nav a:hover {
+      color: #FFD700;
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* ===== TICKER ===== */
+    .ticker {
+      background: #FFF3CD;
+      border-top: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+      padding: 7px 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow: hidden;
+    }
+
+    .ticker-label {
+      background: var(--red);
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 3px;
+      white-space: nowrap;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .ticker marquee {
+      color: #333;
+      font-size: 12.5px;
+      font-weight: 600;
+    }
+
+    /* ===== MAIN LAYOUT ===== */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 10px;
+      padding: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ===== SECTION BOXES ===== */
+    .section-box {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    .section-header {
+      padding: 8px 12px;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .section-header.orange {
+      background: linear-gradient(90deg, var(--orange), #e55a00);
+      color: white;
+      border-bottom-color: #c44d00;
+    }
+
+    .section-header.navy {
+      background: linear-gradient(90deg, var(--navy), #243fa8);
+      color: white;
+    }
+
+    .section-header.green {
+      background: linear-gradient(90deg, #2e7d32, #1b5e20);
+      color: white;
+    }
+
+    .section-header.red {
+      background: linear-gradient(90deg, #c62828, #b71c1c);
+      color: white;
+    }
+
+    .section-header .icon { font-size: 16px; }
+
+    .result-list { padding: 8px 0; }
+
+    .result-item {
+      padding: 7px 12px;
+      border-bottom: 1px dashed #e0e0e0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      transition: background 0.15s;
+    }
+
+    .result-item:hover {
+      background: #fff8f0;
+    }
+
+    .result-item:last-child { border-bottom: none; }
+
+    .result-item .bullet {
+      color: var(--orange);
+      font-size: 16px;
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+
+    .result-item .text { flex: 1; }
+
+    .result-item .title {
+      color: #1a1a1a;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.4;
+      text-decoration: none;
+    }
+
+    .result-item .title:hover { color: var(--orange); text-decoration: underline; }
+
+    .result-item .meta {
+      font-size: 11px;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    .badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 3px;
+      white-space: nowrap;
+      margin-left: 5px;
+    }
+
+    .badge.new { background: #e53935; color: white; animation: blink 1.2s infinite; }
+    .badge.hot { background: var(--orange); color: white; }
+    .badge.imp { background: var(--navy); color: white; }
+    .badge.admit { background: #7b1fa2; color: white; }
+    .badge.result { background: #1b5e20; color: white; }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar .section-box { margin-bottom: 10px; }
+
+    .quick-link-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+      padding: 8px;
+    }
+
+    .quick-link {
+      background: var(--light-orange);
+      border: 1px solid #ffcc80;
+      border-radius: 4px;
+      padding: 8px 5px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--navy);
+      font-size: 11.5px;
+      font-weight: 600;
+      transition: all 0.2s;
+      display: block;
+    }
+
+    .quick-link:hover {
+      background: var(--orange);
+      color: white;
+      border-color: var(--orange);
+    }
+
+    .quick-link .ql-icon { font-size: 18px; display: block; margin-bottom: 3px; }
+
+    /* ===== STATS BAR ===== */
+    .stats-bar {
+      background: linear-gradient(90deg, #1A2D6E, #2a4abf, #1A2D6E);
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 15px;
+      margin: 0 10px 10px 10px;
+      border-radius: 4px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-item .num {
+      font-size: 20px;
+      font-weight: 800;
+      color: #FFD700;
+      font-family: 'Baloo 2', cursive;
+    }
+
+    .stat-item .lbl {
+      font-size: 10px;
+      color: #b0bbff;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== ABOUT BOX SIDEBAR ===== */
+    .about-founder {
+      padding: 12px;
+      text-align: center;
+    }
+
+    .about-founder .founder-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .about-founder .founder-role {
+      font-size: 11px;
+      color: var(--orange);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .about-founder .founder-desc {
+      font-size: 11.5px;
+      color: #555;
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    /* ===== AD BOXES ===== */
+    .ad-box {
+      background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+      border: 1px dashed #4caf50;
+      border-radius: 4px;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .ad-box .ad-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .ad-box .ad-text {
+      font-size: 11px;
+      color: #555;
+      margin-top: 3px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: linear-gradient(90deg, #1A2D6E, #111d52);
+      color: #aaa;
+      padding: 20px 15px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    footer .footer-logo {
+      font-family: 'Baloo 2', cursive;
+      font-size: 24px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #FF6B00, #FFA500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 5px;
+    }
+
+    footer p { font-size: 12px; line-height: 1.7; }
+    footer a { color: #7f8ff5; text-decoration: none; }
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 10px 0;
+      flex-wrap: wrap;
+    }
+    footer .footer-links a { font-size: 12px; }
+
+    .copyright {
+      border-top: 1px solid #2a3580;
+      margin-top: 12px;
+      padding-top: 10px;
+      font-size: 11px;
+      color: #666;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .main-layout { grid-template-columns: 1fr; }
+      .stats-bar { flex-wrap: wrap; gap: 10px; }
+      header { flex-direction: column; text-align: center; gap: 8px; }
+      .header-right { text-align: center; }
+      .site-title h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <marquee behavior="scroll" direction="left">
+    🔔 नई नौकरियां देखें | Railway Recruitment 2026 | SSC CGL Result | UP Police Bharti | IBPS PO Notification | Bihar TET 2026
+  </marquee>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-section">
+    <!-- Logo image embedded as base64 placeholder; replace src with actual logo URL -->
+    <img src="/mnt/user-data/uploads/1000100968.jpg" alt="IndiaLink Logo" onerror="this.style.display='none'">
+    <div class="site-title">
+      <h1>IndiaLink Result</h1>
+      <div class="subtitle">Updates &amp; Support</div>
+      <div class="hindi-sub">सरकारी नौकरी | परिणाम | एडमिट कार्ड | अधिसूचना</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="founder">
+      Founded by
+      <strong>Rajan Kumar</strong>
+      Founder, IndiaLink
+    </div>
+    <div class="date-box" id="dateBox">📅 Loading...</div>
+  </div>
+</header>
+
+<!-- MAIN NAV -->
+<nav>
+  <a href="#" class="active">🏠 Home</a>
+  <a href="#">📋 Latest Jobs</a>
+  <a href="#">📊 Results</a>
+  <a href="#">🎫 Admit Card</a>
+  <a href="#">📢 Answer Key</a>
+  <a href="#">🎓 Syllabus</a>
+  <a href="#">📰 Current Affairs</a>
+  <a href="#">💰 Finance Tips</a>
+  <a href="#">🌐 Int. Relations</a>
+</nav>
+
+<!-- SECOND NAV -->
+<div class="second-nav">
+  <a href="#">Railway</a>
+  <a href="#">SSC</a>
+  <a href="#">UPSC</a>
+  <a href="#">Banking</a>
+  <a href="#">State PSC</a>
+  <a href="#">Defence</a>
+  <a href="#">Teaching</a>
+  <a href="#">Police</a>
+  <a href="#">10th Pass</a>
+  <a href="#">12th Pass</a>
+  <a href="#">Scholarship</a>
+</div>
+
+<!-- TICKER -->
+<div class="ticker">
+  <span class="ticker-label">🔴 LIVE</span>
+  <marquee behavior="scroll" direction="left" scrollamount="4">
+    ⚡ Bihar Board 12th Result 2026 DECLARED | SSC GD Result 2026 जारी | Railway Group D Bharti 2026 | UPSC CSE Prelims 2026 Notification | UP Police SI Bharti | IndiaLink WhatsApp से जुड़ें
+  </marquee>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar" style="max-width:1200px; margin: 10px auto; border-radius:4px;">
+  <div class="stat-item">
+    <div class="num">1,24,000+</div>
+    <div class="lbl">Active Jobs</div>
+  </div>
+  <div class="stat-item">
+    <div class="num">580+</div>
+    <div class="lbl">Results 2026</div>
+  </div>
+  <div class="stat-item">
+    <div class="num">320+</div>
+    <div class="lbl">Admit Cards</div>
+  </div>
+  <div class="stat-item">
+    <div class="num">50,000+</div>
+    <div class="lbl">Visitors/Day</div>
+  </div>
+  <div class="stat-item">
+    <div class="num">100%</div>
+    <div class="lbl">Verified Info</div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-layout">
+
+  <!-- LEFT: MAIN CONTENT -->
+  <div class="content">
+
+    <!-- LATEST JOBS -->
+    <div class="section-box">
+      <div class="section-header orange">
+        <span class="icon">📋</span> Latest Govt Jobs 2026 — नवीनतम सरकारी नौकरी
+      </div>
+      <div class="result-list">
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">Railway RRB NTPC Recruitment 2026 — 11558 Posts <span class="badge new">NEW</span></a>
+            <div class="meta">Last Date: 30 April 2026 | Posts: 11558 | योग्यता: 12th Pass</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">SSC CHSL Recruitment 2026 — 3712 Posts <span class="badge hot">HOT</span></a>
+            <div class="meta">Last Date: 25 April 2026 | Posts: 3712 | योग्यता: 12th Pass</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">UP Police Constable Bharti 2026 — 60244 Posts <span class="badge new">NEW</span></a>
+            <div class="meta">Last Date: 15 May 2026 | Posts: 60244 | State: Uttar Pradesh</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">IBPS PO Notification 2026 — 4455 Posts</a>
+            <div class="meta">Last Date: 10 May 2026 | Posts: 4455 | Sector: Banking</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">Bihar Police SI Recruitment 2026 — 1275 Posts <span class="badge hot">HOT</span></a>
+            <div class="meta">Last Date: 20 April 2026 | Posts: 1275 | State: Bihar</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">UPSC CDS Recruitment 2026 — 459 Posts</a>
+            <div class="meta">Last Date: 05 May 2026 | Posts: 459 | Sector: Defence</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">NHM MP Community Health Officer 2026 — 2850 Posts <span class="badge new">NEW</span></a>
+            <div class="meta">Last Date: 28 April 2026 | Posts: 2850 | State: MP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="section-box">
+      <div class="section-header green">
+        <span class="icon">📊</span> Latest Results 2026 — परीक्षा परिणाम
+      </div>
+      <div class="result-list">
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">Bihar Board 12th (Intermediate) Result 2026 <span class="badge result">RESULT</span> <span class="badge new">NEW</span></a>
+            <div class="meta">Declared: 20 April 2026 | Board: BSEB Bihar</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">SSC GD Constable Result 2026 <span class="badge result">RESULT</span></a>
+            <div class="meta">Declared: 18 April 2026 | Posts: 26146</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">UPSC NDA Result 2025 Final <span class="badge result">RESULT</span></a>
+            <div class="meta">Declared: 15 April 2026 | Exam: NDA & NA</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">UP Board 10th/12th Result 2026 <span class="badge result">RESULT</span> <span class="badge hot">HOT</span></a>
+            <div class="meta">Declared: 14 April 2026 | Board: UP Madhyamik</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">IBPS Clerk Final Result 2025-26 <span class="badge result">RESULT</span></a>
+            <div class="meta">Declared: 12 April 2026 | Sector: Banking</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADMIT CARD -->
+    <div class="section-box">
+      <div class="section-header navy">
+        <span class="icon">🎫</span> Admit Card 2026 — प्रवेश पत्र
+      </div>
+      <div class="result-list">
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">SSC CGL Tier 1 Admit Card 2026 <span class="badge admit">ADMIT</span> <span class="badge new">NEW</span></a>
+            <div class="meta">Exam Date: 26-30 April 2026 | Download Now</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">Railway Group D Admit Card 2026 <span class="badge admit">ADMIT</span></a>
+            <div class="meta">Exam Date: May 2026 | RRB Zones</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">UPSC Prelims 2026 Admit Card <span class="badge admit">ADMIT</span></a>
+            <div class="meta">Exam Date: 25 May 2026 | All India</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">Bihar TET 2026 Admit Card <span class="badge admit">ADMIT</span> <span class="badge new">NEW</span></a>
+            <div class="meta">Exam Date: 05 May 2026 | State: Bihar</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINANCE & CURRENT AFFAIRS (IndiaLink Special) -->
+    <div class="section-box">
+      <div class="section-header" style="background: linear-gradient(90deg, #7b1fa2, #6a1b9a); color:white;">
+        <span class="icon">💡</span> IndiaLink Special — Finance & Current Affairs (Hindi)
+      </div>
+      <div class="result-list">
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">भारत का विदेश व्यापार घाटा 2026 — क्या आप जानते हैं? <span class="badge imp">IMP</span></a>
+            <div class="meta">By: Rajan Kumar | Category: Finance | 19 April 2026</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">US-China Tariff War का भारत पर असर — हिंदी में समझें <span class="badge new">NEW</span></a>
+            <div class="meta">By: Rajan Kumar | Category: International Relations | 18 April 2026</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">RBI Repo Rate घटी — आपकी EMI पर क्या असर? <span class="badge hot">HOT</span></a>
+            <div class="meta">By: Rajan Kumar | Category: Finance | 17 April 2026</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <span class="bullet">▶</span>
+          <div class="text">
+            <a href="#" class="title">AI और Technology — भारत के युवाओं के लिए अवसर</a>
+            <div class="meta">By: Rajan Kumar | Category: Technology | 16 April 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDEBAR -->
+  <div class="sidebar">
+
+    <!-- QUICK LINKS -->
+    <div class="section-box">
+      <div class="section-header orange">
+        <span class="icon">⚡</span> Quick Links
+      </div>
+      <div class="quick-link-grid">
+        <a href="#" class="quick-link"><span class="ql-icon">📋</span>Latest Jobs</a>
+        <a href="#" class="quick-link"><span class="ql-icon">📊</span>Results</a>
+        <a href="#" class="quick-link"><span class="ql-icon">🎫</span>Admit Card</a>
+        <a href="#" class="quick-link"><span class="ql-icon">📢</span>Answer Key</a>
+        <a href="#" class="quick-link"><span class="ql-icon">🎓</span>Syllabus</a>
+        <a href="#" class="quick-link"><span class="ql-icon">📰</span>Current Affairs</a>
+        <a href="#" class="quick-link"><span class="ql-icon">💰</span>Finance</a>
+        <a href="#" class="quick-link"><span class="ql-icon">🌐</span>Int. Relations</a>
+      </div>
+    </div>
+
+    <!-- JOIN WHATSAPP -->
+    <div class="section-box">
+      <div class="section-header" style="background: linear-gradient(90deg, #25D366, #128C7E); color:white;">
+        <span class="icon">📱</span> WhatsApp Group Join करें
+      </div>
+      <div style="padding: 12px; text-align:center;">
+        <div style="font-size:32px; margin-bottom:8px;">💬</div>
+        <p style="font-size:12px; color:#333; font-weight:600; margin-bottom:8px;">IndiaLink WhatsApp Community<br>हिंदी में सटीक जानकारी पाएं</p>
+        <a href="#" style="display:block; background:#25D366; color:white; padding:8px; border-radius:5px; text-decoration:none; font-weight:700; font-size:13px;">Join Now →</a>
+        <p style="font-size:10px; color:#999; margin-top:6px;">Finance | Tech | Current Affairs | IR</p>
+      </div>
+    </div>
+
+    <!-- FOUNDER CARD -->
+    <div class="section-box">
+      <div class="section-header navy">
+        <span class="icon">👤</span> Founder
+      </div>
+      <div class="about-founder">
+        <div style="width:60px; height:60px; background: linear-gradient(135deg, #FF6B00, #1A2D6E); border-radius:50%; margin: 0 auto 8px; display:flex; align-items:center; justify-content:center; font-size:24px; color:white; font-weight:800;">R</div>
+        <div class="founder-name">Rajan Kumar</div>
+        <div class="founder-role">Founder, IndiaLink</div>
+        <div class="founder-desc">हिंदी भाषी भारतीयों के लिए Finance, Tech, International Relations और Current Affairs की सटीक जानकारी पहुँचाने का मिशन।</div>
+      </div>
+    </div>
+
+    <!-- STATE WISE JOBS -->
+    <div class="section-box">
+      <div class="section-header red">
+        <span class="icon">🗺️</span> State Wise Jobs
+      </div>
+      <div style="padding: 8px 12px;">
+        <div style="display:flex; flex-wrap:wrap; gap:5px;">
+          <a href="#" style="background:#fff3e0; border:1px solid #ffcc80; color:#e65100; padding:4px 8px; border-radius:3px; text-decoration:none; font-size:11px; font-weight:600;">Bihar</a>
+          <a href="#" style="background:#fff3e0; border:1px solid #ffcc80; color:#e65100; padding:4px 8px; border-radius:3px; text-decoration:none; font-size:11px; font-weight:600;">UP</a>
+          <a href="#" style="background:#fff3e0; border:1px solid #ffcc80; color:#e65100; padding:4px 8px; border-radius:3px; text-decoration:none; font-size:11px; font-weight:600;">MP</a>
+          <a href="#" style="background:#fff3e0; border:1px solid #ffcc80; color:#e65100; padding:4px 8px; border-radius:3px; text-decoration:none; font-size:11px; font-weight:600;">Rajasthan</a>
+          <a href="#" style="background:#fff3e0; border:1px solid #ffcc80; color:#e65100; padding:4px 8px; border-radius:3px; text-decoration:none; font-size:11px; font-weight:600;">Delhi</a>
+          <a href="#" style="background:#fff3e0; border:1px solid #ffcc80; color:#e65100; padding:4px 8px; border-radius:3px; text-decoration:none; font-size:11px; font-weight:600;">Jharkhand</a>
+          <a href="#" style="background:#fff3e0; border:1px solid #ffcc80; color:#e65100; padding:4px 8px; border-radius:3px; text-decoration:none; font-size:11px; font-weight:600;">Haryana</a>
+          <a href="#" style="background:#fff3e0; border:1px solid #ffcc80; color:#e65100; padding:4px 8px; border-radius:3px; text-decoration:none; font-size:11px; font-weight:600;">Gujarat</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODAY'S UPDATE -->
+    <div class="ad-box">
+      <div class="ad-title">✅ आज की महत्वपूर्ण खबर</div>
+      <div class="ad-text">Bihar Board 12th Result 2026 घोषित! अपना Roll No डालकर चेक करें।</div>
+      <a href="#" style="display:block; background:#2e7d32; color:white; margin-top:8px; padding:6px; border-radius:4px; text-decoration:none; font-size:12px; font-weight:700;">Check Now →</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">IndiaLink Result</div>
+  <p>भारत की सबसे विश्वसनीय हिंदी सरकारी नौकरी और परिणाम वेबसाइट</p>
+  <div class="footer-links">
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Disclaimer</a>
+    <a href="#">Sitemap</a>
+    <a href="#">WhatsApp Group</a>
+  </div>
+  <p>Disclaimer: यह एक unofficial educational website है। सभी जानकारी Official websites से ली जाती है।</p>
+  <div class="copyright">
+    © 2026 IndiaLink Result | Founded by <strong style="color:#FFD700;">Rajan Kumar</strong> | All Rights Reserved
+  </div>
+</footer>
+
+<script>
+  // Set live date
+  const d = new Date();
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  document.getElementById('dateBox').textContent = `📅 ${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+</script>
+
+</body>
+</html>
